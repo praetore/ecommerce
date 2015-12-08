@@ -11,15 +11,21 @@ namespace Bolt;
 
 class Category
 {
+    /**
+     * @var string|string
+     */
     private $name;
+    /**
+     * @var \ArrayObject
+     */
     private $products;
 
     /**
      * Category constructor.
-     * @param $name
-     * @param $products
+     * @param string $name
+     * @param \ArrayObject $products
      */
-    public function __construct($name, $products)
+    public function __construct(string $name, \ArrayObject $products)
     {
         $this->name = $name;
         $this->products = $products;

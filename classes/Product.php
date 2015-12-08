@@ -11,19 +11,31 @@ namespace Bolt;
 
 class Product
 {
+    /**
+     * @var string|string
+     */
     private $name;
+    /**
+     * @var Category
+     */
     private $category;
+    /**
+     * @var double|float
+     */
     private $price;
+    /**
+     * @var string|string
+     */
     private $description;
 
     /**
      * Product constructor.
-     * @param $name
-     * @param $category
-     * @param $price
-     * @param $description
+     * @param string $name
+     * @param Category $category
+     * @param double $price
+     * @param string $description
      */
-    public function __construct($name, $category, $price, $description)
+    public function __construct(string $name, Category $category, double $price, string $description)
     {
         $this->name = $name;
         $this->category = $category;

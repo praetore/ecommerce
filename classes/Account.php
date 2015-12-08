@@ -11,25 +11,40 @@ namespace Bolt;
 
 class Account
 {
+    /**
+     * @var string|string
+     */
     private $email;
+    /**
+     * @var string|string
+     */
     private $password;
+    /**
+     * @var Customer
+     */
     private $customer;
+    /**
+     * @var boolean|bool
+     */
+    private $disabled;
 
     /**
      * Account constructor.
-     * @param $email
-     * @param $password
-     * @param $customer
+     * @param string|string $email
+     * @param string|string $password
+     * @param Customer $customer
+     * @param boolean $disabled
      */
-    public function __construct($email, $password, $customer)
+    public function __construct(string $email, string $password, Customer $customer, boolean $disabled)
     {
         $this->email = $email;
         $this->password = $password;
         $this->customer = $customer;
+        $this->disabled = $disabled;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getEmail()
     {
@@ -37,7 +52,7 @@ class Account
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getPassword()
     {
@@ -45,10 +60,12 @@ class Account
     }
 
     /**
-     * @return mixed
+     * @return Customer
      */
     public function getCustomer()
     {
         return $this->customer;
     }
+
+
 }

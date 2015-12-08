@@ -11,15 +11,21 @@ namespace Bolt;
 
 class Cart
 {
+    /**
+     * @var \ArrayObject
+     */
     private $products;
+    /**
+     * @var Account
+     */
     private $account;
 
     /**
      * Cart constructor.
-     * @param $products
-     * @param $account
+     * @param \ArrayObject $products
+     * @param Account $account
      */
-    public function __construct($products, $account)
+    public function __construct(\ArrayObject $products, Account $account)
     {
         $this->products = $products;
         $this->account = $account;
