@@ -11,9 +11,12 @@ namespace Bolt;
 
 class Autoloader
 {
+    /**
+     * @param $class
+     */
     public function load($class)
     {
-        $dir = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'classes';
+        $dir = join(array(dirname(__DIR__), 'classes'), DIRECTORY_SEPARATOR);
         $file = $dir . DIRECTORY_SEPARATOR . $class . '.php';
 
         include $file;

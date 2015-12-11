@@ -1,0 +1,16 @@
+{
+  "name": "bolt/bolt",
+  "description": "A lightweight ecommerce framework",
+  "minimum-stability": "dev",
+  "license": "Apache 2",
+  "authors": [
+    {
+      "name": "Darryl Amatsetam",
+      "email": "d.amatsetam@gmail.com"
+    }
+  ],
+  "require": {
+    "smarty/smarty": "~3.1",
+    "elasticsearch/elasticsearch": "^2.1"
+  }
+}
